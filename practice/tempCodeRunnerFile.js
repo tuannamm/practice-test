@@ -1,8 +1,23 @@
-(function(a, b) {
-    console.log(a + b);
-})(1, 2);
+function creatCounter(initialValue) {
+    let value = initialValue || 0;
+    
+    function increase() {
+        value++;
+    }
 
+    function decrease() {
+        value--;
+    }
 
-((a,b) => {
-    console.log(a+b);
-})(1, 2);
+    function getValue() {
+        return value;
+    }
+
+    return {
+        increase,
+        decrease,
+        getValue,
+    }
+}
+
+console.log(creatCounter(1).increase());
