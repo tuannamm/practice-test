@@ -1,9 +1,27 @@
-function count() {
-    let number = 1;
-    function display(str) {
-        console.log(`${number} ${str}`);
+function creatCounter(initialValue) {
+    var value = initialValue || 0;
+
+    function increase() {
+        value++;
     }
-    return display;
+
+    function decrease() {
+        value--;
+    }
+
+    function getValue() {
+        console.log(value);
+        return value;
+    }
+
+    return {
+        increase: increase,
+        decrease: decrease,
+        getValue: getValue,
+    }
 }
-const count1 = count();
-count1("một");
+
+const counter = creatCounter(1);
+console.log(typeof counter);
+counter.increase;
+counter.getValue;
