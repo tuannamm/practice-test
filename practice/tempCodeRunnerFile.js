@@ -1,23 +1,12 @@
-function creatCounter(initialValue) {
-    let value = initialValue || 0;
-    
-    function increase() {
-        value++;
+function makeFunc() {
+    var name = "Nom";
+
+    function displayName() {
+        console.log(name);
     }
 
-    function decrease() {
-        value--;
-    }
-
-    function getValue() {
-        return value;
-    }
-
-    return {
-        increase,
-        decrease,
-        getValue,
-    }
+    return displayName;
 }
 
-console.log(creatCounter(1).increase());
+var myFunc = makeFunc();
+console.log(myFunc.displayName);
