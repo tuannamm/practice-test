@@ -1,1 +1,8 @@
-console.log(1);
+(function(a, b) {
+    console.log(a + b);
+})(1, 2);
+
+
+((a,b) => {
+    console.log(a+b);
+})(1, 2);
