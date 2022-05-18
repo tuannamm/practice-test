@@ -1,15 +1,17 @@
+const teacher = {
+    firstName: 'Dan',
+    lastName: 'Le'
+}
 
-this.firstName = "Tuan"
-this.lastName = "Nam"
-
-const student = {
-    firstName: "Tun",
-    lastName: "Nom",
-    getFullName() {
+const me = {
+    firstName: 'Tuan',
+    lastName: 'Nam',
+    showFullName() {
         console.log(`${this.firstName} ${this.lastName}`);
     }
 }
 
-const button = document.querySelector("button");
+me.showFullName();
 
-button.onclick = student.getFullName.bind(student);
+const fullNameTeacher = me.showFullName.bind(teacher);
+fullNameTeacher();
