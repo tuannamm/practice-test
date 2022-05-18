@@ -1,1 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
+#nav {
+  height: 46px;
+  width: 100%;
+  background-color: #000;
+}
+
+#nav .navigation {
+  display: flex;
+}
+
+#nav .navigation a {
+  color: white;
+}
+
+#nav .navigation li {
+  line-height: 46px;
+  padding: 0 24px;
+  text-decoration: none;
+}
+
+#nav .navigation li:hover {
+  background-color: rgb(165, 153, 153);
+}

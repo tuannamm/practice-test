@@ -7,11 +7,10 @@ const me = {
     firstName: 'Tuan',
     lastName: 'Nam',
     showFullName() {
-        console.log(`${this.firstName} ${this.lastName}`);
+        return(`${this.firstName} ${this.lastName}`);
     }
 }
 
 me.showFullName();
 
-const fullNameTeacher = me.showFullName.bind(teacher);
-fullNameTeacher();
+console.log(me.showFullName.call());
