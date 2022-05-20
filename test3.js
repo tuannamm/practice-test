@@ -1,18 +1,23 @@
 const teacher = {
-    name: "Son Dang",
-    age: 29,
-    getInfor() {
-        return `${this.name} ${this.age}`;
+    fullName : "Minh Thu",
+    isOnline : false,
+    goOnline() {
+        isOnline = true;
+        console.log(`Hello ${this.fullName}`);
+    },
+    goOffline() {
+        isOffline = true;
+        console.log(`Bye ${this.fullName}`);
     }
 };
 
 const student = {
-    name:  "Tuan Nam",
-    age: 21,
-}
+    fullName : 'Tuấn Nam',
+    isOnline : false,
+};
 
-
-console.log(teacher.getInfor());
-
-const getInforStudent = teacher.getInfor.bind(student);
-console.log(getInforStudent());
+teacher.goOffline();
+teacher.goOnline();
+console.log("-------------------");
+teacher.goOffline.apply(student);
+teacher.goOnline.apply(student);
